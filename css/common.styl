@@ -1,0 +1,40 @@
+.BasePanel
+  // background:linear-gradient(top, #DDD, #CCC)
+  color:#000
+  cursor:default
+  overflow:hidden
+  transition:opacity .15s cubic-bezier(0.2, 0.13, 0.85, 0.97)
+  opacity:1
+  &.hidden
+    opacity:0
+    // display:none
+
+
+.BarPanel
+  @extends .BasePanel
+  position:absolute
+  left:0
+  right:0
+  display:block
+
+.ColumnPanel
+  @extends .BasePanel
+  top:0
+  bottom:0
+  position:absolute
+  width:320px
+  border-top:10px solid #222
+  outline:1px solid #BBB
+  padding:2em 1em
+  &:before
+    position:absolute
+    right:0
+    left:0
+    cursor:pointer
+    display:block
+    content:" "
+    text-indent:-9999px
+    height:1em
+    background:#F60
+    margin-top:-2em
+    cursor:pointer

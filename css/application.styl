@@ -1,0 +1,117 @@
+@import 'nib'
+@import 'common'
+
+html, body
+  margin:0
+  padding:0
+  font-size:11px
+  font-family:Helvetica, Arial, sans-serif
+  background:#FFF
+
+::selection
+  background:transparent
+  cursor:default
+
+h1
+  margin:.15em .3em
+
+$headerHeight=32px
+$headerBorder=1px
+$headerOuterHeight=$headerHeight+$headerBorder
+header
+  @extend .BarPanel
+  height:$headerHeight
+  top:0
+  border-bottom:$headerBorder solid #BBB
+
+$footerHeight=40px
+$footerBorder=1px
+$footerOuterHeight=$footerHeight+$footerBorder
+footer
+  @extend .BarPanel
+  height:$footerHeight
+  bottom:0
+  border-top:1px solid #BBB
+
+#ApplicationContentArea
+  position:absolute
+  top:$headerOuterHeight
+  right:0
+  bottom:$footerOuterHeight
+  left:0
+
+@import 'widgets-default'
+
+.PoolView
+  @extends .ColumnPanel
+
+:invalid  
+  border-color: rgba(255, 0, 0, .25)
+  box-shadow:0 0 5px rgba(255, 0, 0, .25)
+  background:#FDD
+
+:required 
+  border-color: rgba(255, 80, 0, .25)
+  box-shadow: 0 0 15px rgba(255, 80, 0, .25)
+
+
+form 
+  margin: 1em auto 0
+
+  fieldset
+    border: 1px solid #EEE
+    border-radius: 3px
+    margin: 0 auto 1em
+    padding:1em 2em
+
+  legend
+    font-size:1.4em
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif
+    text-indent:-2px
+
+  ul
+    margin:0
+    list-style:none
+    padding:0
+
+  input 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    border:1px solid #ccc
+    font-size:20px
+    min-height:30px
+    display:block
+    margin-bottom:15px
+    margin-top:5px
+    outline: none
+    border-radius:5px
+    width:100%
+
+  input[type=submit], input[type=button], button
+    font-weight:bold
+    color:#888
+    text-shadow:0 1px 1px #FFF
+    border-radius:0
+    font-size:1.4em
+    border:1px solid #CCC
+    background-repeat:repeat-x
+    background-image:linear-gradient(top, #E6E6E6, #BABABA)
+    background-position:0 0
+    background-color:#E6E6E6
+    transition: border-color, color, background-position .15s ease
+    box-shadow:0 1px 6px rgba(0, 0, 0, 0.3)
+    cursor:pointer
+    position:relative
+    &:hover
+      background-position: 0 6px;
+      color:#777
+      border-color:#ccc
+    &:active
+      top:1px
+      box-shadow:0 0px 5px rgba(0, 0, 0, 0.3)
+    &:first-child
+      border-top-left-radius:2px
+      border-bottom-left-radius:2px
+    &:last-child
+      border-top-right-radius:2px
+      border-bottom-right-radius:2px
+

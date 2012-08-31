@@ -1,0 +1,46 @@
+<a href="/#/">&laquo; back...</a>
+
+<h2>Register</h2>
+
+<form>
+    <fieldset>
+        <legend>Basic info.</legend>
+        <ul>
+            <li>
+                <label for="username">Username</label>
+                <input type="" name="username" id="username" required autofocus>
+            </li>
+            <li>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" title="Enter valid E-mail address.
+                Eg. hello@example.com">
+            </li>
+            <li>
+                <label for="email_repeat">E-mail &mdash; yeah, again</label>
+                <input type="email" name="email_repeat" id="email_repeat" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" title="Enter valid E-mail address.
+                Eg. hello@example.com">
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required pattern="^.{8,}" title="Minimum 8 characters">
+            </li>
+            <li>
+                <label for="password_repeat">Repeat password</label>
+                <input type="password" name="password_repeat" id="password_repeat" required pattern="^.{8,}" title="Minimum 8 characters">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <ul>
+            <li>
+                <input type="submit" value="Sign up!" /> 
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+<ul>
+    <li>
+        <span class="ctaContext"><a href="/#/login" class="loginLink">Login</a></span>
+    </li>
+</ul>
